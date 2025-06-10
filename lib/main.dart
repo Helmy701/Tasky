@@ -10,6 +10,7 @@ import 'package:tasky/features/welcome/welcome_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await ScreenUtil.ensureScreenSize();
 
   await PreferencesManager().init();
   ThemeController().init();
