@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:tasky/core/theme/theme_controller.dart';
 import 'package:tasky/features/home/home_controller.dart';
@@ -50,8 +51,8 @@ class AchievedTasksWidget extends StatelessWidget {
                   Transform.rotate(
                     angle: -pi / 2,
                     child: SizedBox(
-                      height: 48,
-                      width: 48,
+                      height: 48.h,
+                      width: 48.w,
                       child: CircularProgressIndicator(
                         value: controller.percent,
                         backgroundColor: Color(0xFF6D6D6D),
