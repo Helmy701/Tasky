@@ -152,7 +152,7 @@ class TaskItemWidget extends StatelessWidget {
               padding: EdgeInsets.only(
                 left: 16.w,
                 right: 16.w,
-                top: 8.h,
+                top: 5.h,
                 bottom: MediaQuery.of(context).viewInsets.bottom +
                     8.h, // 👈 Add bottom padding
               ),
@@ -163,7 +163,7 @@ class TaskItemWidget extends StatelessWidget {
                       .min, // 👈 Make sure column height fits content
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 30.h),
+                    SizedBox(height: 27.h),
                     CustomTextFormField(
                       controller: taskNameController,
                       title: "Task Name",
