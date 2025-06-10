@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class CustomTextFormField extends StatelessWidget {
+  const CustomTextFormField({
+    super.key,
+    required this.controller,
+    required this.hintText,
+    required this.title,
+    this.validator,
+    this.maxLines,
+  });
+
+  final TextEditingController controller;
+  final String title;
+  final String hintText;
+  final Function(String?)? validator;
+  final int? maxLines;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(title, style: Theme.of(context).textTheme.titleMedium),
+        SizedBox(height: 8.h),
+        TextFormField(
+          controller: controller,
+          style: Theme.of(context).textTheme.labelMedium,
+          maxLines: maxLines,
+          validator:
+              validator != null ? (String? value) => validator!(value) : null,
+          decoration: InputDecoration(hintText: hintText),
+          onTapUpOutside: (_) {
+            FocusManager.instance.primaryFocus?.unfocus();
+          },
+        ),
+      ],
+    );
+  }
+}
