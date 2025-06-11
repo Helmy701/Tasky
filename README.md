@@ -119,6 +119,8 @@ shared_preferences: ^2.5.3
 provider: ^6.1.5
 image_picker: ^1.1.2
 path_provider: ^2.1.5
+flutter_native_splash: ^2.4.6
+flutter_screenutil: ^5.9.3
 ````
 
 ---
@@ -142,4 +144,9 @@ Handles:
 * `addTask()`, `editTask()`, `deleteTask()`
 * Filtering tasks into "To Do" and "Completed"
 * Persisting and retrieving tasks from storage
+
+### 🎨 ThemeController
+* Handles switching between light and dark mode.
+* Persists the selected theme mode locally using shared_preferences to retain user preference across app launches.
+
 
